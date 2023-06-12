@@ -11,6 +11,9 @@ RUN apt install -y libgl1-mesa-glx
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
 
-RUN cat detect_3.py
+WORKDIR /app  # Set the working directory to /app
 
-CMD ["python3", "detect_3.py", "--weights", "best.pt", "--conf", "0.5", "--source", "/Testcases/Distraction_Mobile_Truck.mp4"]
+COPY . /app  # Copy the current directory contents to /app
+
+CMD python3 detect_3.py --weights 'runs/train/Mobile_Detection2/weights/best.pt' --conf 0.5 --source '/Testcases/Distraction_Mobile_Truck.mp4'
+
