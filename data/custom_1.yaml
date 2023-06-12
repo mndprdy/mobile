@@ -1,0 +1,14 @@
+names:
+- Hand
+- Mobile
+- Person
+nc: 3
+roboflow:
+  license: CC BY 4.0
+  project: mobile-jrr9b
+  url: https://universe.roboflow.com/mobiledetection/mobile-jrr9b/dataset/2
+  version: 2
+  workspace: mobiledetection
+test: /home/mani/Project_5/Project_5/yolov7/Mobile-2/test/images
+train: /home/mani/Project_5/Project_5/yolov7/Mobile-2/train/images
+val: /home/mani/Project_5/Project_5/yolov7/Mobile-2/valid/images
