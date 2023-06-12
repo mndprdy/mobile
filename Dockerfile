@@ -8,9 +8,13 @@ RUN apt-get install git -y
 RUN apt-get update -y && apt-get install -y python3-pip python3-dev libsm6 libxext6 libxrender-dev
 RUN apt install -y libgl1-mesa-glx
 
-WORKDIR /app  # Set the working directory to /app
+RUN cd /root
+RUN pwd
+RUN mkdir MD && cd MD
 
-COPY . /app  # Copy the current directory contents to /app
+WORKDIR /root/MD  # Set the working directory to /app
+
+COPY . /root/MD   # Copy the current directory contents to /app
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
