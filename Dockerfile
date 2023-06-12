@@ -15,5 +15,5 @@ WORKDIR /app  # Set the working directory to /app
 
 COPY . /app  # Copy the current directory contents to /app
 
-CMD python3 detect_3.py --weights 'runs/train/Mobile_Detection2/weights/best.pt' --conf 0.5 --source '/Testcases/Distraction_Mobile_Truck.mp4'
+CMD python3 detect_3.py --weights 'best.pt' --conf 0.5 --source '/Testcases/Distraction_Mobile_Truck.mp4'
 
