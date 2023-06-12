@@ -4,5 +4,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: localhost:5000/md_app
+    image: md_app
 
